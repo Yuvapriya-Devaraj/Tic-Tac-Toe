@@ -1,0 +1,140 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+  padding: 20px;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .cell {
+  background-color: #333;
+  color: #f0f0f0;
+  border-color: #888;
+}
+
+body.dark-mode .cell:hover {
+  background-color: #444;
+}
+
+body.dark-mode #resetBtn,
+body.dark-mode #modeToggle {
+  background-color: #555;
+  color: #f0f0f0;
+}
+
+/* Toggle Button */
+#modeToggle {
+  padding: 8px 20px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  border: none;
+  background-color: #007acc;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#modeToggle:hover {
+  background-color: #005f99;
+}
+
+/* Scoreboard */
+.scoreboard {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.cell:hover {
+  background-color: #f0f8ff;
+  transform: scale(1.05);
+}
+
+.cell.winning {
+  background-color: #c0ffc0;
+  color: #000;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    background-color: #90ee90;
+  }
+}
+
+#status {
+  font-size: 1.4rem;
+  margin: 20px;
+  color: #444;
+}
+
+#resetBtn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007acc;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+#resetBtn:hover {
+  background-color: #005f99;
+}
+
+#startOverBtn {
+  background-color: #d9534f;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#startOverBtn:hover {
+  background-color: #c9302c;
+}
+
+body.dark-mode #startOverBtn {
+  background-color: #aa3e3a;
+}
+
